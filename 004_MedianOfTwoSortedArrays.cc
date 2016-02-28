@@ -21,6 +21,7 @@ public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         
         int total=nums1.size()+nums2.size();
+		if (total == 0) throw std::invalid_argument("");
         int m=nums1.size(),n=nums2.size();
         int *p1,*p2;
         if (m) p1=&nums1[0];

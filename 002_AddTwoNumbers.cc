@@ -9,6 +9,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+		if (!l1 || !l2) return NULL;
         int sum=l1->val+l2->val;
         ListNode* root=new ListNode(sum%10);
         ListNode* p=root;

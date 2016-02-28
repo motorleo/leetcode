@@ -1,13 +1,13 @@
 class Solution {
 public:
     string intToRoman(int num) {
-        struct change{                      //转换接口类。
+        struct change{                      
             change(int v,const string c):value(v),ch(c){}
             int value;
             string ch;
             int t=0;
             
-            void make_t(int& num){    //转换大于value的值。
+            void make_t(int& num){    
                 t=num/value;
                 num%=value;
             }

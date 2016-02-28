@@ -13,12 +13,12 @@ public:
                 int median=sum-nums[j];
                 if (!search.count(median))
                     search.insert(nums[j]);
-                else{                //匹配成功后跳过重复的数字
+                else{                //鍖归厤鎴愬姛鍚庤烦杩囬噸澶嶇殑鏁板瓧
                     result.push_back({nums[i],median,nums[j]});
                     while (j+1<len&&nums[j]==nums[j+1]) ++j;
                 }
             }
-            while (i+1<len&&nums[i]==nums[i+1]) ++i;   //跳过重复数字
+            while (i+1<len&&nums[i]==nums[i+1]) ++i;   //璺宠繃閲嶅鏁板瓧
         }
         return result;
     }

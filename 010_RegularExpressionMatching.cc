@@ -1,5 +1,6 @@
 bool match(const char* s,const char* p){
     if (*p=='\0') return *s=='\0';
+	else if (*s == '\0') return false;
     //next char != '*'
     if (*(p+1)!='*')
     {
